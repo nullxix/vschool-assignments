@@ -1,0 +1,39 @@
+.center-everything {
+    width: 70%;
+    margin: auto;   
+}
+
+h1{
+    color: #228833;
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h1, h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+img {
+    float: left;
+    margin: 20pt;
+}
+
+p {
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div:nth-last-of-type(1) {
+    text-transform: uppercase;
+}
