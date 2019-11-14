@@ -1,0 +1,57 @@
+
+body header {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 98pt;
+    font-weight: 900;
+    text-align: center;
+    margin: 40pt 0;
+}
+
+article {
+    font-family: 'Times New Roman', Times, serif;
+    width: 70%;
+    margin: auto;
+}
+
+article header {
+    text-align: center;
+    font-size: 56pt; 
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: black;
+    border-bottom-style: solid;
+    border-bottom-width: 30pt;
+    border-top: black;
+    border-top-style: solid;
+    border-top-width: 30pt;
+}
+
+article p {
+    width: 90%;
+    margin: 25pt auto 25pt auto;
+    text-align: justify;
+}
+
+article p:nth-of-type(odd){
+    margin-left: 10%;
+    transform: rotate(2deg);
+}
+
+article p:nth-of-type(even){
+    margin-right: 10%;
+
+    transform: rotate(-3deg);
+}
+
+.dcap {
+    font-size: 23pt;
+    float: left;
+    font-weight: 800;
+    padding: 4px 8px 4px 8px;
+    border: solid black 1.5pt;
+    margin: 4px 4px 0px 0px;
+}
+
+embed {
+    width: 100%;
+}
