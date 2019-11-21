@@ -1,0 +1,55 @@
+#form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#input{
+    /* width: 11%; */
+}
+#form button{
+    /* max-width: 80pt; */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name {
+    color: peachpuff;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 20px;
+}
+
+#main {
+    margin: 30px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.message {
+    padding: 5px;
+}
+
+.message.right{
+    background-color: lightblue;
+}
+
+.message.left{
+    background-color: burlywood;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.left {
+    align-self: flex-start;
+}

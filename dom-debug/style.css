@@ -1,0 +1,30 @@
+
+*{
+    margin: 0;
+}
+.main {
+    padding: 8 px;
+    margin: 4px;
+    border-radius: 5px;
+}
+.subItem {
+    padding: 4px;
+    margin: 2px;
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.orange{
+    background-color: orange;
+    color: white;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}

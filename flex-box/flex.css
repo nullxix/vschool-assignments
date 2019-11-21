@@ -1,0 +1,14 @@
+.container{
+    background: pink;
+}
+
+.box{
+    display:inline-block;
+}
+
+.box:nth-of-type(1){
+    background: blue;
+}
+.box:nth-last-of-type(1){
+    background: red;
+}
