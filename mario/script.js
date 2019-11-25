@@ -17,12 +17,12 @@ cheepcheeps.addEventListener("input", function(e){updateFloatingCoin(e, cheepche
 
 function createBill(e){
     e.preventDefault();
-    var total = Number(e.target.goombas.value) + Number(e.target.bobombs.value) + Number(e.target.cheepcheeps.value);
-    spitOut(total)
+    var total = Number(e.target.goombas.value) * 5 + Number(e.target.bobombs.value) * 7 + Number(e.target.cheepcheeps.value) * 11;
+    spitOut("Peach owes Mario " + total + " smoochies")
 }
 
 function spitOut(txt){
-    console.log(txt)
+    output.innerText += txt + "\n";
 }
 
 function updateFloatingCoin(e, monster, floatingCoin){
