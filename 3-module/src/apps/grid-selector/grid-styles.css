@@ -1,0 +1,29 @@
+#grid {
+    padding: 20px 0;
+    background: pink;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    height: 240px;
+    grid-template-columns: auto;
+    justify-content: left;
+
+    overflow-x: scroll;
+}
+
+.grid-dot {
+    /* margin: 5px; */
+    width: 40px;
+    box-sizing: border-box;
+    background: lightsteelblue;
+    text-align: center;
+}
+
+.grid-dot:nth-child(2n) {
+    background: lightslategrey;
+}
+
+.selected {
+    outline: red solid 5px;
+    z-index: 1;
+}

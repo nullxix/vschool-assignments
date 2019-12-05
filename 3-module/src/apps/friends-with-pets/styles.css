@@ -1,0 +1,71 @@
+
+
+.friend-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 0.5em
+}
+
+.friend-box > div{
+    padding: 0.25em;
+}
+
+.friend-box > div:nth-child(1){
+    text-align: right;
+    font-weight: 900;
+
+    background: rgb(253, 99, 43);
+    grid-column: 1 / 2;
+}
+
+.friend-box > div:nth-child(2){
+    background: rgb(209, 127, 209);
+    grid-column: 2 / -1;
+}
+
+.friend-box > div:nth-child(3){
+    text-align: right;
+    font-weight: 900;
+
+    background: coral;
+    grid-column: 1 / 2;
+}
+
+.friend-box > div:nth-child(4){
+    background: rgb(236, 172, 236);
+    grid-column: 2 / -1;
+}
+
+.pets-container{
+
+    margin: 0  0 5% 15%;
+
+    width: 110%;
+
+    border-radius: 0 0 1.1em 1.1em;
+    background: rgb(210, 231, 255);
+
+}
+
+.pet{
+    width: 100%;
+    border-radius: 5em;
+    padding: 0.1em;
+}
+.pet > div{
+    padding: 0.1em;
+
+}
+.pet > div:nth-child(2n+1){
+    background: rgb(53, 109, 214);
+    font-weight: 900;
+    font-size: larger;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.pet > div:nth-child(2n){
+    background: rgb(100, 194, 237);
+
+    border-radius: 0 0 0.5em 0.5em;
+
+}
