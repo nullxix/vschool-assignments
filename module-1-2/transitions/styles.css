@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.it-container {
+    margin: 1%;
+    background: darkblue;
+    width: 200px;
+    /* border: white solid 10px; */
+    outline: transparent solid 0.1px;
+    transition: all 0.12s ease-in-out;
+}
+
+.it{
+    /* border: transparent solid 10px; */
+    padding-bottom: 100%;
+
+
+}
+
+.it-container:hover {
+    /* background: red; */
+    /* border: lightblue solid 10px; */
+    outline: lightblue solid 10px;
+    border-radius: 100px;
+    border: lightblue;
+
+    
+
+    /* transition: all 1s ease-in-out; */
+}
+
+#it-container:f
