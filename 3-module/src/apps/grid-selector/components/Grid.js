@@ -1,67 +1,69 @@
 import React from "react"
 import GridDot from "./GridDot"
+import GridDotEvil from "./GridDotEvil"
 
 class Grid extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            selectorIndex: 7,
+            selectorIndex: 11,
             gridDotCount: 64
         }
-
         document.body.addEventListener("keypress",this.handleKeyPress)
     }
 
-    
 
     handleKeyPress = (event) => {
-        console.log(event.key)
         let newIndex = this.state.selectorIndex;
         let gridHeight = 4;
 
         let tryNewIndex = (i) => {
-            if(newIndex + i > 0 && newIndex + 1 < this.state.gridDotCount){
+            if(newIndex + i >= 0 && newIndex + i < this.state.gridDotCount){
                 //new index is within bounds
                 return newIndex += i;
             } else {
-                if(newIndex + i > 0){
+                if(newIndex + i >= 0){
                     //new index is above bounds
-                    return newIndex = this.state.gridDotCount - (i - newIndex)
+                    return newIndex = newIndex - (this.state.gridDotCount - i);
                 } else {
                     //new index is below bounds
-                    return newIndex = newIndex - (this.state.gridDotCount - i);
+
+                     console.log("current:", this.state.gridDotCount, i, newIndex)
+                    return newIndex = this.state.gridDotCount + (i + newIndex)
                 }
             }
         }
 
         switch(event.key){
             case "a": //left
-                    console.log("left")
-                    tryNewIndex(-4)
+                    console.log(tryNewIndex(-4))
                     break;
             case "w": //up
-                    tryNewIndex(-1)
+                    console.log(tryNewIndex(-1))
                     break;
             case "d": //right
-                    tryNewIndex(4)
+                    console.log(tryNewIndex(4))
                     break;
             case "s": //down
-                    tryNewIndex(1)
+                    console.log(tryNewIndex(1))
                     break;
         }
 
         let newState = this.state;
         newState.selectorIndex = newIndex;
-        this.setState()
+        this.setState(newState)
     }
 
     render(){
 
     let dotArray = Array(this.state.gridDotCount).fill(null).map((ele, i) => {
         let isSelected = this.state.selectorIndex === i ? true : false;
-        console.log(isSelected)
+        let returnMe;
+        isSelected ?
+            returnMe = <GridDot key={"grid-dot"+i} temp={(isSelected ? "XXX" : i)} selected={isSelected}/>
+            : returnMe = <GridDotEvil key={"grid-dot"+i} temp={(isSelected ? "XXX" : i)} selected={isSelected}/>;
 
-        return <GridDot key={"grid-dot"+i} temp={i+1} selected={isSelected}/>
+        return returnMe
     })
 
         return(
