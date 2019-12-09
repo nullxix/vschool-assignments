@@ -1,6 +1,5 @@
 import React from "react"
 import GridDot from "./GridDot"
-import GridDotEvil from "./GridDotEvil"
 
 class Grid extends React.Component{
     constructor(props){
@@ -59,9 +58,16 @@ class Grid extends React.Component{
     let dotArray = Array(this.state.gridDotCount).fill(null).map((ele, i) => {
         let isSelected = this.state.selectorIndex === i ? true : false;
         let returnMe;
-        isSelected ?
-            returnMe = <GridDot key={"grid-dot"+i} temp={(isSelected ? "XXX" : i)} selected={isSelected}/>
-            : returnMe = <GridDotEvil key={"grid-dot"+i} temp={(isSelected ? "XXX" : i)} selected={isSelected}/>;
+        // isSelected ?
+        //     returnMe = <GridDot key={"grid-dot"+i} temp={(isSelected ? "XXX" : i)} selected={isSelected}/>
+        //     : returnMe = <GridDotEvil key={"grid-dot"+i} temp={(isSelected ? "XXX" : i)} selected={isSelected}/>;
+
+        let newClassName = "grid-dot";
+        if(isSelected){
+            newClassName = "grid-dot selected"
+        }
+
+        returnMe = <GridDot key={"grid-dot"+i} temp={(isSelected ? "XXX" : i)} selected={isSelected} className={newClassName}/>
 
         return returnMe
     })

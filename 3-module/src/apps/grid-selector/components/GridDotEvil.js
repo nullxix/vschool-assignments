@@ -18,7 +18,7 @@ class GridDotEvil extends React.Component{
         //add 'selected' class if this element is selected
         let className = this.state.selected ? "grid-dot grid-dot-evil": "grid-dot grid-dot-evil";
         return(
-            <span className={className}> {this.props.temp ? this.props.temp : "0" }</span>
+            <div className={className}> {this.props.temp ? this.props.temp : "0" }</div>
         )
     }
 
