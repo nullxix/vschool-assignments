@@ -1,0 +1,31 @@
+* {
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+#app{
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 2, 53, 0.295);
+
+}
+
+
+.hit-card {
+    color: white;
+    background: rgb(0, 0, 0);
+
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+.hit-card > img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}

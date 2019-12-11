@@ -1,0 +1,26 @@
+form, #badge{
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 60%;
+    margin: auto;
+
+    text-align: center;
+}
+
+form *:nth-child(1n), #badge *:nth-child(1n){
+    background: burlywood;
+    width: 40%;
+    margin: 1.1em auto;
+}
+
+form *:nth-last-child(1), #badge *:nth-last-child(1),
+form *:nth-last-child(2){
+    background: cadetblue;
+    width: 100%;
+    min-height: 5em;
+}
+
+form *:nth-last-child(2), #badge *:nth-last-child(1){
+    text-align: left;
+}
