@@ -1,0 +1,20 @@
+{
+  "name": "booyah-server",
+  "version": "1.0.0",
+  "description": "Is a server with the power of booyah",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "booyah",
+    "power",
+    "love"
+  ],
+  "author": "Me, dur",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^3.3.3"
+  }
+}

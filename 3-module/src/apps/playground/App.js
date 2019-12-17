@@ -1,40 +1,12 @@
-import  React, {useState, useEffect} from "react"
+import React from "react"
+import BigContext from "./BigContext"
 import Box from "./Box"
-import GimmeFruit from "./GimmeFruit"
 
-function App(props){
-    const [fruit, setFruit] = useState("apple");
-
-    const handleClick = () => {
-        setFruit("orange")
-    }
-
-    useEffect(() => {
-        console.log("THIS IS ONLY THE BEGINNING")
-    },[])
-
-    useEffect(() => {
-        console.log("something happened")
-    })
+export default function App(props){
 
     return (
-        <>
-            <div> Hey there</div>
-            <GimmeFruit fruit="watermelon">
-                {(fruit) => {
-                    return <Box handleClick = {handleClick} fruit={fruit}/>
-                }}
-            </GimmeFruit>
-            <Box handleClick = {handleClick} value={7} fruit={fruit}/>
-            <GimmeFruit>
-                {(fruit) => {
-                    return <Box handleClick = {handleClick} value={23} fruit={fruit}/>
-                }}
-            </GimmeFruit>
-
-            <Box handleClick = {handleClick} value={2} />
-        </>   
+        <BigContext.Provider value={{color: "blue", species: "monkey"}} >
+            <Box/>
+        </BigContext.Provider>
     )
 }
-
-export default App;

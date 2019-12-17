@@ -1,0 +1,12 @@
+* {
+    background: indigo;
+    color: white;
+}
+
+.dark-theme {
+    background: grey;
+}
+
+.xtra-dark-theme {
+    background: black;
+}
