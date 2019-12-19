@@ -1,0 +1,21 @@
+{
+  "name": "ice-cream-server",
+  "version": "1.0.0",
+  "description": "serves icecream",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "icecream",
+    "ice",
+    "cream",
+    "ice-cream"
+  ],
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "proxy": "https://localhost:1337"
+}
